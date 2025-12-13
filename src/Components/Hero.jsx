@@ -11,10 +11,10 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       <div className="mt-16 flex flex-col items-center justify-center z-10">
-        <h1 className="text-8xl font-bold text-lime-400 text-center drop-shadow-lg">
+        <h1 className="md:text-8xl sm:text-7xl  font-bold text-lime-400 text-center drop-shadow-lg">
           ELEVATE YOUR WARRIOR SPIRIT
         </h1>
-        <p className="text-3xl text-center max-w-2xl text-gray-300 mt-6 drop-shadow-lg">
+        <p className="md:text-3xl sm:text-2xl text-center max-w-2xl text-gray-300 mt-6 drop-shadow-lg">
           Premium Christian & gym-wear designed for the bold, the disciplined,
           and the unstoppable.
         </p>
