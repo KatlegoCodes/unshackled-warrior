@@ -8,7 +8,9 @@ export const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-gray-800">
       <div className="h-16 flex items-center justify-between px-6">
-        <h1 className="text-3xl font-bold text-lime-400">UNSHACKLED WARRIOR</h1>
+        <h1 className="text-3xl font-bold text-lime-400 font-['Saira_Stencil_One']">
+          UNSHACKLED WARRIOR
+        </h1>
 
         <ul className="hidden md:flex gap-15 md:text-lg font-light text-white">
           <li>
@@ -34,7 +36,7 @@ export const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <ShoppingCart className="text-white hover:text-lime-200 cursor-pointer md:block hidden" />
+          <ShoppingCart className="text-white hover:text-lime-300 cursor-pointer " />
 
           <button
             className="text-white md:hidden cursor-pointer"
