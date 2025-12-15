@@ -3,6 +3,7 @@ import { Navbar } from "./Components/Navbar";
 import { Hero } from "./Components/Hero";
 import { Footer } from "./Components/Footer";
 import { FeaturedCollection } from "./Components/FeaturedCollection";
+import { Cta } from "./Components/Cta";
 
 export const App = () => {
   return (
@@ -10,6 +11,7 @@ export const App = () => {
       <Navbar />
       <Hero />
       <FeaturedCollection />
+      <Cta />
       <Footer />
     </div>
   );
