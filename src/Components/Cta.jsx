@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import background_image from "../assets/gym-3.jpg";
 
 export const Cta = () => {
@@ -9,7 +10,13 @@ export const Cta = () => {
     >
       <div className="absolute inset-0 bg-black/50 blur-3xl" />
 
-      <div className="relative max-w-4xl mx-auto text-center text-white z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative max-w-4xl mx-auto text-center text-white z-10"
+      >
         <h1 className="text-white text-7xl font-semibold">
           TRAIN WITH PURPOSE.
         </h1>
@@ -26,7 +33,7 @@ export const Cta = () => {
             Our Story
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
