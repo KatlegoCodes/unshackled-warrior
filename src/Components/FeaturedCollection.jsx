@@ -1,5 +1,5 @@
 import React from "react";
-import { assets, projectData } from "../assets/assets";
+import { projectData } from "../assets/assets";
 import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -19,7 +19,7 @@ export const FeaturedCollection = () => {
       </div>
 
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 mt-12 max-w-7xl mx-auto">
-        {projectData.map((item) => {
+        {projectData.slice(0, 4).map((item) => {
           return (
             <motion.div
               whileHover={{ y: -6 }}
