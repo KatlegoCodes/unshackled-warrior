@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ShoppingCart } from "lucide-react";
 
@@ -14,24 +15,24 @@ export const Navbar = () => {
 
         <ul className="hidden md:flex gap-15 md:text-lg font-light text-white">
           <li>
-            <a href="#Home" className="hover:text-lime-200">
+            <Link to="/" className="hover:text-lime-200">
               home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Shop" className="hover:text-lime-200">
+            <Link to="/shop" className="hover:text-lime-200">
               shop
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Contact" className="hover:text-lime-200">
+            <Link to="/contact" className="hover:text-lime-200">
               contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#About" className="hover:text-lime-200">
+            <Link to="/about" className="hover:text-lime-200">
               about
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -71,24 +72,30 @@ export const Navbar = () => {
                 <X size={28} />
               </button>
 
-              <a href="#Home" className="block text-white hover:text-lime-300">
+              <Link
+                to="/"
+                className="block text-white hover:bg-lime-300 hover:text-gray-800 transition-colors duration-700 p-2 rounded-xl"
+              >
                 home
-              </a>
-              <a href="#Shop" className="block text-white hover:text-lime-300">
+              </Link>
+              <Link
+                to="/shop"
+                className="block text-white hover:bg-lime-300 hover:text-gray-800 transition-colors duration-700 p-2 rounded-xl "
+              >
                 shop
-              </a>
-              <a
-                href="#Contact"
-                className="block text-white hover:text-lime-300"
+              </Link>
+              <Link
+                to="/contact"
+                className="block text-white hover:bg-lime-300 hover:text-gray-800 transition-colors duration-700 p-2 rounded-xl"
               >
                 contact
-              </a>
-              <a
-                href="#About"
-                className="block text-white hover:text-lime-300 mb-5"
+              </Link>
+              <Link
+                to="/about"
+                className="block text-white hover:bg-lime-300 hover:text-gray-800 transition-colors duration-700 p-2 rounded-xl"
               >
                 about
-              </a>
+              </Link>
             </motion.div>
           </>
         )}
