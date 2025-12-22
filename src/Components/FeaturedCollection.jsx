@@ -1,7 +1,6 @@
 import React from "react";
 import { projectData } from "../assets/assets";
 import { ProductCard } from "./ProductCard";
-import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const FeaturedCollection = () => {
