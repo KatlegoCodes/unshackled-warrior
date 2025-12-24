@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import background from "../assets/background.jpg";
 
@@ -31,14 +32,16 @@ export const Hero = () => {
           and the unstoppable.
         </motion.p>
 
-        <motion.button
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.4 }}
-          className="mt-12 py-3 px-6 text-gray-900 bg-lime-400 rounded-lg font-semibold hover:bg-lime-600 hover:scale-105 transition duration-300 drop-shadow-lg"
-        >
-          Shop Now
-        </motion.button>
+        <Link to="/shop">
+          <motion.button
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 0.4 }}
+            className="mt-12 py-3 px-6 text-gray-900 bg-lime-400 rounded-lg font-semibold hover:bg-lime-600 hover:scale-105 transition duration-300 drop-shadow-lg cursor-pointer"
+          >
+            Shop Now
+          </motion.button>
+        </Link>
       </div>
     </section>
   );

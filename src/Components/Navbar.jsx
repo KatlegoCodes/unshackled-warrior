@@ -1,17 +1,23 @@
 import React, { useState } from "react";
+import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ShoppingCart } from "lucide-react";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { cartItems } = useCart();
+
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-gray-800">
       <div className="h-16 flex items-center justify-between px-6">
-        <h1 className="text-3xl font-bold text-lime-400 font-['Saira_Stencil_One']">
-          UNSHACKLED WARRIOR
-        </h1>
+        <Link to="/">
+          <h1 className="text-3xl font-bold text-lime-400 font-['Saira_Stencil_One']">
+            UNSHACKLED WARRIOR
+          </h1>
+        </Link>
 
         <ul className="hidden md:flex gap-15 md:text-lg font-light text-white">
           <li>
@@ -36,8 +42,14 @@ export const Navbar = () => {
           </li>
         </ul>
 
-        <div className="flex items-center gap-4">
+        <div className=" relative flex items-center gap-4">
           <ShoppingCart className="text-white hover:text-lime-300 cursor-pointer " />
+
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-lime-400 text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+              {cartCount}
+            </span>
+          )}
 
           <button
             className="text-white md:hidden cursor-pointer"

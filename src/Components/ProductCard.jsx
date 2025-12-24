@@ -1,8 +1,11 @@
 import React from "react";
+import { useCart } from "../context/CartContext";
 import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const ProductCard = ({ product, showCategory = true }) => {
+  const { addToCart } = useCart();
+
   return (
     <motion.div
       className="bg-gray-900 rounded-2xl p-4 shadow-lg hover:shadow-2xl transition group border border-amber-50/10"
@@ -25,7 +28,10 @@ export const ProductCard = ({ product, showCategory = true }) => {
 
       <p className="mt-2 text-lg font-bold text-white m-2">{product.price}</p>
 
-      <button className="flex items-center justify-center w-full mt-4 gap-2 bg-lime-400 text-black px-16 py-2 rounded-2xl font-semibold transition hover:scale-105">
+      <button
+        onClick={() => addToCart(product)}
+        className="flex items-center justify-center w-full mt-4 gap-2 bg-lime-400 active:bg-lime-200 text-black px-16 py-2 rounded-2xl font-semibold transition hover:scale-105 cursor-pointer"
+      >
         <ShoppingCart size={18} />
         Add to cart
       </button>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { projectData } from "../assets/assets";
 import { ProductCard } from "./ProductCard";
 import { motion } from "framer-motion";
@@ -24,11 +25,13 @@ export const FeaturedCollection = () => {
         ))}
       </div>
 
-      <div className="mt-20">
-        <button className="text-white border border-white rounded-2xl py-2 px-8 text-sm hover:scale-105 transition duration-300 hover:border-lime-400 hover:text-lime-400">
-          View Products
-        </button>
-      </div>
+      <Link to="/shop">
+        <div className="mt-20">
+          <button className="text-white border border-white rounded-2xl py-2 px-8 text-sm hover:scale-105 transition duration-300 hover:border-lime-400 hover:text-lime-400">
+            View Products
+          </button>
+        </div>
+      </Link>
     </section>
   );
 };
