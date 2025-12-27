@@ -46,7 +46,7 @@ export const Navbar = () => {
           <ShoppingCart className="text-white hover:text-lime-300 cursor-pointer " />
 
           {cartCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-lime-400 text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+            <span className="absolute md:-top-2 md:-right-2 sm:-top-1 sm:right-9 bg-lime-400 text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
               {cartCount}
             </span>
           )}
