@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import background_image from "../assets/gym-3.jpg";
 
@@ -29,9 +30,11 @@ export const Cta = () => {
           className="flex gap-6 justify-center"
           aria-label="Learn About Our Story"
         >
-          <button className="text-gray-950 py-3 px-10 font-semibold bg-linear-to-br from-orange-500 to-orange-300 rounded-xl hover:scale-105 transform duration-300">
-            Our Story
-          </button>
+          <Link to="/about">
+            <button className="text-gray-950 py-3 px-10 font-semibold bg-linear-to-br from-orange-500 to-orange-300 rounded-xl hover:scale-105 transform duration-300">
+              Our Story
+            </button>
+          </Link>
         </div>
       </motion.div>
     </section>
