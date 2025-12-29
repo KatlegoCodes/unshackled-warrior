@@ -26,7 +26,7 @@ export const ProductCard = ({ product, showCategory = true }) => {
         <p className="text-sm text-gray-400 m-2">{product.category}</p>
       )}
 
-      <p className="mt-2 text-lg font-bold text-white m-2">{product.price}</p>
+      <p className="mt-2 text-lg font-bold text-white m-2">R{product.price}</p>
 
       <button
         onClick={() => addToCart(product)}
