@@ -307,7 +307,7 @@ export const Contact = () => {
             href="#"
             variants={itemVariants}
             whileHover={{ y: -5 }}
-            className="p-4 bg-gradient-to-br from-pink-500/10 to-purple-500/10 rounded-lg border border-pink-500/20 hover:border-pink-500/40 transition-colors duration-300 group"
+            className="p-4 bg-linear-to-br from-pink-500/10 to-purple-500/10 rounded-lg border border-pink-500/20 hover:border-pink-500/40 transition-colors duration-300 group"
           >
             <Instagram className="w-7 h-7 text-pink-400 group-hover:text-pink-300 transition-colors duration-300" />
             <span className="block text-xs text-gray-400 mt-2">
@@ -319,7 +319,7 @@ export const Contact = () => {
             href="#"
             variants={itemVariants}
             whileHover={{ y: -5 }}
-            className="p-4 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-300 group"
+            className="p-4 bg-linear-to-br from-blue-500/10 to-cyan-500/10 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-300 group"
           >
             <Twitter className="w-7 h-7 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
             <span className="block text-xs text-gray-400 mt-2">
@@ -331,7 +331,7 @@ export const Contact = () => {
             href="#"
             variants={itemVariants}
             whileHover={{ y: -5 }}
-            className="p-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-lg border border-red-500/20 hover:border-red-500/40 transition-colors duration-300 group"
+            className="p-4 bg-linear-to-br from-red-500/10 to-orange-500/10 rounded-lg border border-red-500/20 hover:border-red-500/40 transition-colors duration-300 group"
           >
             <Youtube className="w-7 h-7 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
             <span className="block text-xs text-gray-400 mt-2">
@@ -344,7 +344,7 @@ export const Contact = () => {
       {/* Response Time Info */}
       <motion.div
         variants={itemVariants}
-        className="max-w-5xl mx-auto mt-12 p-6 bg-gradient-to-r from-lime-400/5 to-blue-400/5 border border-lime-400/20 rounded-xl"
+        className="max-w-5xl mx-auto mt-12 p-6 bg-linear-to-r from-lime-400/5 to-blue-400/5 border border-lime-400/20 rounded-xl"
       >
         <div className="flex items-center gap-3 text-lime-400">
           <Clock className="w-5 h-5" />
