@@ -17,7 +17,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-6xl md:text-8xl sm:text-7xl  font-bold text-lime-400 text-center drop-shadow-lg p-4"
+          className="text-5xl md:text-8xl sm:text-7xl  font-bold text-lime-400 text-center drop-shadow-lg p-4"
         >
           ELEVATE YOUR WARRIOR SPIRIT
         </motion.h1>
