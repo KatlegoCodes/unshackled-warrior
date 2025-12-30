@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <section
       id="#Home"
-      className="bg-cover bg-center h-screen w-full flex items-center justify-center"
+      className="relative bg-cover bg-center h-screen w-full flex items-center justify-center"
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
