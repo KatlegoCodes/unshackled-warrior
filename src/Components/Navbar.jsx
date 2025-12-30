@@ -14,7 +14,7 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-gray-800">
       <div className="h-16 flex items-center justify-between px-6">
         <Link to="/">
-          <h1 className="text-3xl font-bold text-lime-400 font-['Saira_Stencil_One']">
+          <h1 className="text-xl sm:text-xl md:text-2xl tracking-wider font-bold text-lime-400 font-['Saira_Stencil_One']">
             UNSHACKLED WARRIOR
           </h1>
         </Link>
