@@ -19,31 +19,43 @@ export const Cart = () => {
         )}
 
         {cartItems.length > 0 && (
-          <div className="space-y-6">
+          <div className="flex flex-col space-y-4">
             {cartItems.map((item) => (
               <div
                 key={item.id}
-                className="flex items-center gap-6 bg-gray-800 p-4 rounded-xl"
+                className="bg-gray-800 rounded-xl p-4 space-y-4"
               >
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-20 h-20 object-cover rounded-lg"
-                />
+                {/* Top: Image + Info */}
+                <div className="flex gap-4">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-20 h-20 object-cover rounded-lg shrink-0"
+                  />
 
-                <div className="flex-1">
-                  <h3 className="font-semibold text-lg">{item.name}</h3>
-                  <p className="text-sm text-gray-400">{item.category}</p>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-base leading-tight">
+                      {item.name}
+                    </h3>
+                    <p className="text-xs text-gray-400 mt-1">
+                      {item.category}
+                    </p>
+                  </div>
                 </div>
 
-                <div className="text-bold">R{item.price * item.quantity}</div>
+                {/* Bottom: Price + Actions */}
+                <div className="flex items-center justify-between">
+                  <div className="font-bold text-lg text-white">
+                    R{item.price * item.quantity}
+                  </div>
 
-                <button
-                  onClick={() => removeFromCart(item.id)}
-                  className="text-red-400 hover:text-red-300 text-sm"
-                >
-                  Remove
-                </button>
+                  <button
+                    onClick={() => removeFromCart(item.id)}
+                    className="text-red-400 text-xs uppercase tracking-wide hover:text-red-300"
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -55,7 +67,7 @@ export const Cart = () => {
               Total: <span className="font-bold ml-2">R{totalPrice}</span>
             </p>
 
-            <button className="bg-lime-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-lime-300 transition">
+            <button className="bg-lime-400 text-black px-4 py-2 text-sm md:text-lg md:px-6 md:py-3 rounded-full font-semibold hover:bg-lime-300 transition">
               Proceed to Checkout
             </button>
           </div>
