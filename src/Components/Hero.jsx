@@ -17,7 +17,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-5xl md:text-8xl sm:text-7xl  font-bold text-lime-400 text-center drop-shadow-lg p-4"
+          className="text-4xl md:text-8xl sm:text-7xl  font-extrabold text-lime-400 text-center drop-shadow-lg p-4"
         >
           ELEVATE YOUR WARRIOR SPIRIT
         </motion.h1>
@@ -26,7 +26,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-2xl md:text-3xl sm:text-2xl sm:max-w-md sm:mt-10 text-center md:max-w-2xl text-gray-300 mt-6 drop-shadow-lg px-4"
+          className="text-xl md:text-3xl sm:text-2xl sm:max-w-md sm:mt-10 text-center md:max-w-2xl text-gray-300 mt-6 drop-shadow-lg px-4"
         >
           Premium Christian & gym-wear designed for the bold, the disciplined,
           and the unstoppable.
