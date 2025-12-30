@@ -302,7 +302,10 @@ export const Contact = () => {
           Stay connected with us on social media for updates and news.
         </p>
 
-        <motion.div variants={containerVariants} className="flex gap-4">
+        <motion.div
+          variants={containerVariants}
+          className="flex flex-wrap gap-4"
+        >
           <motion.a
             href="#"
             variants={itemVariants}
