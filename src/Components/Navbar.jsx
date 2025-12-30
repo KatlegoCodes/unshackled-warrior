@@ -42,24 +42,24 @@ export const Navbar = () => {
           </li>
         </ul>
 
-        <Link to="/cart">
-          <div className=" relative flex items-center gap-4">
-            <ShoppingCart className="text-white hover:text-lime-300 cursor-pointer " />
+        <div className="relative flex items-center gap-4">
+          <Link to="/cart" className="relative">
+            <ShoppingCart className="text-white hover:text-lime-300 cursor-pointer" />
 
             {cartCount > 0 && (
-              <span className="absolute md:-top-2 md:-right-2 sm:-top-1 sm:right-9 bg-lime-400 text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+              <span className="absolute -top-2 -right-2 bg-lime-400 text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
                 {cartCount}
               </span>
             )}
+          </Link>
 
-            <button
-              className="text-white md:hidden cursor-pointer"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
-          </div>
-        </Link>
+          <button
+            className="text-white md:hidden cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
